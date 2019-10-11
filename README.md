@@ -11,7 +11,7 @@ Você pode usar plugin.command para criar novos comandos
 Uma pequena demonstração:
 
 ```kotlin
-plugin.command(teste) { sender, args ->
+plugin.command(teste, "teste.permissionUse") { sender, args ->
 
     if (args.isEmpty()) {
         sender.sendMessage("Você não disse nada!")
