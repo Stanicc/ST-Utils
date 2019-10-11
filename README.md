@@ -92,10 +92,14 @@ sendActionBar(sender, "Mensagem")
 
 Uma pequena demonstração:
 
-* CommandSender.send("Mensagem")
+```kotlin
+CommandSender.send("Mensagem")
+```
 
 É usado para abreviar o sendMessage
 
-* CommandSender.command("op Stanic")
+```kotlin
+CommandSender.command("op Stanic")
+```
 
 É usado para abreviar o dispachcommand
