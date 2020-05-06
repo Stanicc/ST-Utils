@@ -111,6 +111,7 @@ Altere as cores do chat usando:<br>
 string.replaceColor()
 ```
 <br>
+
 ```kotlin
 list.replaceColor()
 ```
