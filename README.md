@@ -107,10 +107,16 @@ CommandSender.command("op Stanic")
 * Replace em listas e replaceColor
 
 Altere as cores do chat usando:<br>
-```string.replaceColor()```
+```kotlin
+string.replaceColor()
+```
 <br>
-````list.replaceColor()````
+```kotlin
+list.replaceColor()
+```
 
 Mude valores em listas usando o replace:<br>
-`````list.replace(""value", ""replacement")`````
+```kotlin
+list.replace(""value" to ""replacement")
+```
 
