@@ -11,7 +11,7 @@ Você pode usar plugin.command para criar novos comandos
 Uma pequena demonstração:
 
 ```kotlin
-plugin.command(teste) { sender, args ->
+plugin.command(teste, "teste.permissionUse") { sender, args ->
 
     if (args.isEmpty()) {
         sender.sendMessage("Você não disse nada!")
@@ -92,11 +92,15 @@ player.sendActionBar("Mensagem")
 
 Uma pequena demonstração:
 
-* CommandSender.send("Mensagem")
+```kotlin
+CommandSender.send("Mensagem")
+```
 
 É usado para abreviar o sendMessage
 
-* CommandSender.command("op Stanic")
+```kotlin
+CommandSender.command("op Stanic")
+```
 
 É usado para abreviar o dispachcommand
 
