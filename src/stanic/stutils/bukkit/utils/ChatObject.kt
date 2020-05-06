@@ -1,4 +1,4 @@
-package stanic.stutils.server.utils
+package stanic.stutils.bukkit.utils
 
 import net.md_5.bungee.api.chat.ClickEvent
 import net.md_5.bungee.api.chat.HoverEvent

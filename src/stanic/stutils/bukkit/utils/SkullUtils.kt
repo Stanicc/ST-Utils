@@ -1,4 +1,4 @@
-package stanic.stutils.server.utils
+package stanic.stutils.bukkit.utils
 
 import org.bukkit.Bukkit
 import org.bukkit.Material

@@ -83,9 +83,9 @@ sendChatObject(sender, list)
 * Envie um title ou um actionbar com mais facilidade
 
 ```kotlin
-sendTitle(sender, "Title", "Subtitle")
+player.sendTitle("Title", "Subtitle")
 
-sendActionBar(sender, "Mensagem")
+player.sendActionBar("Mensagem")
 ```
 
 * Você pode diminuir um pouco as coisas usando abreviações
@@ -99,3 +99,14 @@ Uma pequena demonstração:
 * CommandSender.command("op Stanic")
 
 É usado para abreviar o dispachcommand
+
+* Replace em listas e replaceColor
+
+Altere as cores do chat usando:<br>
+```string.replaceColor()```
+<br>
+````list.replaceColor()````
+
+Mude valores em listas usando o replace:<br>
+`````list.replace(""value", ""replacement")`````
+
