@@ -8,7 +8,7 @@ import net.minecraft.server.v1_8_R3.PacketPlayOutTitle
 import org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer
 import org.bukkit.entity.Player
 
-fun Player.sendTitle(title: String, subTitle: String) {
+fun Player.sendTitleMessage(title: String, subTitle: String) {
     val connection = (this as CraftPlayer).handle.playerConnection
     val titleJSON = IChatBaseComponent.ChatSerializer.a("{'text': '$title'}")
     val subtitleJSON = IChatBaseComponent.ChatSerializer.a("{'text': '$subTitle'}")
