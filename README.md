@@ -2,31 +2,27 @@
   <b>ST-Utils</b><br><br>
 </div>
 
-Uma simples lib para ajudar durante o desenvolvimento para plugins do Minecraft
+A simple lib to help when developing for Minecraft plugins
 
-## Comandos
+## Commands
 
-Você pode usar plugin.command para criar novos comandos
-
-Uma pequena demonstração:
+Create commands easily
 
 ```kotlin
-plugin.command(teste, "teste.permissionUse") { sender, args ->
+plugin.command(test, "test.permission") { sender, args ->
 
     if (args.isEmpty()) {
-        sender.sendMessage("Você não disse nada!")
+        sender.sendMessage("Say something")
     } else {
-        sender.sendMessage("Você disse algo!")
+        sender.sendMessage("Yeah ${args[0]}")
     }
 
 }
 ```
 
-## Eventos
+## Events
 
-Você pode usar plugin.event para criar novos eventos
-
-Uma pequena demonstração:
+Create events easily
 
 ```kotlin
 plugin.event<PlayerJoinEvent> { e ->
@@ -36,25 +32,21 @@ plugin.event<PlayerJoinEvent> { e ->
     if (p.name == "Stanic") {
         p.sendMessage("Hi Stanic!")
     } else {
-        p.sendMessage("Hi noName!")
+        p.sendMessage("Hi!")
     }
 
 }
 ```
 
-## ItemBuilder e SkullBuilder
+## ItemBuilder & SkullBuilder
 
-Você pode usar ItemBuilder para criar itens
-
-Uma pequena demonstração:
+Use ItemBuilder to create item easily
 
 ```kotlin
-val item = ItemBuilder(Material.BARRIER).setName("§aSou uma barreira!").setLore(listOf("", "Me coloque no chão!", "")).build()
+val item = ItemBuilder(Material.BARRIER).setName("§aI'm barrier").setLore(listOf("", "Invisible to players", "")).build()
 ```
 
-Você pode criar skulls customizadas a partir de uma url
-
-Uma pequena demonstração:
+Create skulls by an url with SkullUtils
 
 ```kotlin
 val item = ItemBuilder(SkullUtils().getSkull("http://textures.minecraft.net/texture/9dbdaa755099edd7efa1f12882c7a51b5815db52e0b164aef6df9a1f53eca23")).setName("Sou uma skull!").build()
@@ -62,9 +54,7 @@ val item = ItemBuilder(SkullUtils().getSkull("http://textures.minecraft.net/text
 
 ## ChatObject
 
-Você pode usar o ChatObject para criar um chat clicável
-
-Uma pequena demonstração:
+Create a clickable chat easily
 
 ```kotlin
 val list = ArrayList<ChatObject>()
@@ -78,39 +68,40 @@ list.add(
 sendChatObject(sender, list)
 ```
 
-## Outras utilidades
+## Utilities
 
-* Envie um title ou um actionbar com mais facilidade
+* Send titles and actionbars easily
 
 ```kotlin
 player.sendTitle("Title", "Subtitle")
 
-player.sendActionBar("Mensagem")
+player.sendActionBar("Message")
 ```
 
-* Você pode diminuir um pouco as coisas usando abreviações
-
-Uma pequena demonstração:
+* Decrease a bit like things
 
 ```kotlin
-CommandSender.send("Mensagem")
+CommandSender.send("Message")
 ```
-
-É usado para abreviar o sendMessage
 
 ```kotlin
 CommandSender.command("op Stanic")
 ```
 
-É usado para abreviar o dispachcommand
+* Replace and replaceColor
 
-* Replace em listas e replaceColor
-
-Altere as cores do chat usando:<br>
-```string.replaceColor()```
+Change the color in chat easily using replaceColor:<br>
+```kotlin
+string.replaceColor()
+```
 <br>
-````list.replaceColor()````
 
-Mude valores em listas usando o replace:<br>
-`````list.replace(""value", ""replacement")`````
+```kotlin
+list.replaceColor()
+```
+
+Change values in lists easily using replace:<br>
+```kotlin
+list.replace(""value" to ""replacement")
+```
 
